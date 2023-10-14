@@ -15,7 +15,7 @@ function Index() {
               <Images src={reactLogo} alt="React logo" />
               <h1>Advanced React : </h1>
               <Links>
-                  <Link to='simple-life'>Simple Life</Link>
+                  <Link to='compound'>Compound Components</Link>
               </Links>
           </Container>
       </>

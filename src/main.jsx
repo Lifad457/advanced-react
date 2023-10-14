@@ -4,10 +4,12 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import NotFound from './pages/NotFound.jsx'
 import Layout from './components/Layout.jsx'
 import Index from './pages/Index.jsx'
+import Compound from './pages/Compound.jsx'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
     <Route index element={<Index />} />
+    <Route element={<Compound />} path='compound' />
     <Route path='*' element={<NotFound />} />
   </Route>
 ))
