@@ -16,6 +16,7 @@ function Index() {
               <h1>Advanced React : </h1>
               <Links>
                   <Link to='compound'>Compound Components</Link>
+                  <Link to='context'>Context Hook</Link>
               </Links>
           </Container>
       </>
