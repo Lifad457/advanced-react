@@ -17,6 +17,7 @@ function Index() {
               <Links>
                   <Link to='compound'>Compound Components</Link>
                   <Link to='context'>Context Hook</Link>
+                  <Link to='headless'>Headless Components</Link>
               </Links>
           </Container>
       </>
