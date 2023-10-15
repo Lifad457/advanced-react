@@ -1,21 +1,12 @@
-import React, { useState } from 'react'
 import { StyledMenu } from '../../../styles/compound/styles.css'
+import Toggle from '../toggle/index'
 
 export default function Menu({ children }) {
-    const [open, setOpen] = useState(true)
-
-    function toggle() {
-        setOpen(prevOpen => !prevOpen)
-    }
-    
     return (
+      <Toggle>
         <StyledMenu>
-            {React.Children.map(children, (child) => {
-                return React.cloneElement(child, {
-                    open,
-                    toggle
-                })
-            })}
+          { children }
         </StyledMenu>
+      </Toggle>
     )
 }
