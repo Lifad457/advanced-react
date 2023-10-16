@@ -18,6 +18,7 @@ function Index() {
                   <Link to='compound'>Compound Components</Link>
                   <Link to='context'>Context Hook</Link>
                   <Link to='headless'>Headless Components</Link>
+                  <Link to='render-props'>Render Props</Link>
               </Links>
           </Container>
       </>

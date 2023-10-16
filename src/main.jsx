@@ -7,6 +7,7 @@ import Index from './pages/Index.jsx'
 import Compound from './pages/Compound.jsx'
 import Context from './pages/Context.jsx'
 import Headless from './pages/Headless.jsx'
+import RenderProps from './pages/RenderProps.jsx'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
@@ -14,6 +15,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route element={<Compound />} path='compound' />
     <Route element={<Context />} path='context' />
     <Route element={<Headless />} path='headless' />
+    <Route element={<RenderProps />} path='render-props' />
     <Route path='*' element={<NotFound />} />
   </Route>
 ))
