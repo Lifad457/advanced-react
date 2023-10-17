@@ -1,16 +1,14 @@
 import styled from "styled-components";
-import { BsStar } from "react-icons/bs"
 
-const BaseComponent = styled(BsStar)`
+const BaseComponent = styled.div`
     height: 30px;
     width: 30px;
     cursor: pointer;
-    transition: color .5s ease-in-out;
     user-select: none;
 `
 
-export const ConditionalStyledComponent = styled(BaseComponent).attrs((props) => ({
+export const Star = styled(BaseComponent).attrs((props) => ({
     as: props.asElement || 'div', 
 }))`
-    ${props => props.asElement === BsStar ? "color: white;" : "color: orange;"}
+    ${props => props.asElement.name === "BsStar" ? "color: white;" : "color: orange;"}
 `

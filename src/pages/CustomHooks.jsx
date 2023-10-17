@@ -1,5 +1,5 @@
 import useToggle from "../components/hooks/useToggle"
-import { ConditionalStyledComponent } from "../styles/hooks/styles.css"
+import { Star } from "../styles/hooks/styles.css"
 import GlobalStyle from "../styles/hooks/global-styles.css.js"
 import { BsStar, BsStarFill } from "react-icons/bs"
 
@@ -9,12 +9,7 @@ export default function CustomHooks() {
     return (
         <>
             <GlobalStyle />
-            {
-                on ?
-                <ConditionalStyledComponent asElement={BsStarFill} onClick={toggle} />
-                :
-                <ConditionalStyledComponent asElement={BsStar} onClick={toggle} />
-            }
+            <Star asElement={on ? BsStarFill : BsStar} onClick={toggle} />
         </>
     )
 }
