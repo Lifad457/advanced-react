@@ -19,6 +19,7 @@ function Index() {
                   <Link to='context'>Context Hook</Link>
                   <Link to='headless'>Headless Components</Link>
                   <Link to='render-props'>Render Props</Link>
+                  <Link to='custom-hooks'>Custom Hooks</Link>
               </Links>
           </Container>
       </>
