@@ -8,7 +8,7 @@ const BaseComponent = styled.div`
 `
 
 export const Star = styled(BaseComponent).attrs((props) => ({
-    as: props.asElement || 'div', 
+    as: props.$asElement || 'div', 
 }))`
-    ${props => props.asElement.name === "BsStar" ? "color: white;" : "color: orange;"}
+    ${props => props.$asElement.name === "BsStar" ? "color: white;" : "color: orange;"}
 `
