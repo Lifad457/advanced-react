@@ -9,6 +9,7 @@ import Context from './pages/Context.jsx'
 import Headless from './pages/Headless.jsx'
 import RenderProps from './pages/RenderProps.jsx'
 import CustomHooks from './pages/CustomHooks.jsx'
+import SoloProjects from './pages/SoloProjects.jsx'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
@@ -18,6 +19,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route element={<Headless />} path='headless' />
     <Route element={<RenderProps />} path='render-props' />
     <Route element={<CustomHooks />} path='custom-hooks' />
+    <Route element={<SoloProjects />} path='solo-projects' />
     <Route path='*' element={<NotFound />} />
   </Route>
 ))

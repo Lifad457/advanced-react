@@ -1,21 +1,14 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
+import useEffectOnUpdate from './useEffectOnUpdate'
 
-export default function useToggle({initialValue = false, onToggle = () => {}}) {
+export default function useToggle(initialValue = false, onToggle = () => {}) {
     const [on, setOn] = useState(initialValue)
 
     function toggle() {
         setOn(prevOn => !prevOn)
     }
 
-    const firstRender = useRef(true)
-    useEffect(() => {
-        if (firstRender.current) {
-            firstRender.current = false
-        }
-        else {
-            onToggle()
-        }
-    }, [on])
+    useEffectOnUpdate(onToggle, [on])
 
     return [on, toggle]
 }

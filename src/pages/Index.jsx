@@ -21,6 +21,10 @@ function Index() {
                   <Link to='render-props'>Render Props</Link>
                   <Link to='custom-hooks'>Custom Hooks</Link>
               </Links>
+              <h1>Solo Projects : </h1>
+              <Links>
+                <Link to='solo-projects'>Solo Projects</Link>
+              </Links>
           </Container>
       </>
   )
