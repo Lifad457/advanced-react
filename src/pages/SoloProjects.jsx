@@ -14,6 +14,7 @@ export default function SoloProjects() {
                 </BadgeContainer>
                 <BadgeContainer>
                     <h2>Pill</h2>
+                    <Badge color="gray" shape="pill">Badge</Badge>
                 </BadgeContainer>
             </Container>
         </>

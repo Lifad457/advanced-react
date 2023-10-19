@@ -18,13 +18,19 @@ export const BadgeContainer = styled.div`
 
 `
 
-export const Square = styled.div`
-    border-radius: 1em;
+const commonStyles = `
     display: inline-block;
     background-color: white;
     padding: 0.5em 1em;
 `
 
+export const Square = styled.div`
+    ${commonStyles}
+    
+`
+
 export const Pill = styled.div`
+    ${commonStyles}
+    border-radius: 1em;
     
 `
