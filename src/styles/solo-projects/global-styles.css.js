@@ -46,6 +46,17 @@ const GlobalStyle = createGlobalStyle`
         background-color: #dddddd;
         font-family: var(--ff-primary);
         margin: 0 5%;
+
+        h1 {
+            font-family: var(--ff-secondary);
+            font-size: var(--fs-l-h1);
+        }
+
+        h2 {
+            font-family: var(--ff-secondary);
+            font-size: var(--fs-l-h2);
+            opacity: 0.6;
+        }
     }
 `
 export default GlobalStyle

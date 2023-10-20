@@ -1,36 +1,17 @@
 import {styled} from "styled-components";
 
-export const Container = styled.div`
+export const BadgeContainer = styled.div`
     h1 {
-        font-family: var(--ff-secondary);
-        font-size: var(--fs-l-h1);
         margin: 1em 4em;
     }
-
-    h2 {
-        font-family: var(--ff-secondary);
-        font-size: var(--fs-l-h2);
-        opacity: 0.6;
-    }
 `
-
-export const BadgeContainer = styled.div`
-
-`
-
-const commonStyles = `
+export const StyledBadge = styled.div`
     display: inline-block;
-    background-color: white;
-    padding: 0.5em 1em;
-`
-
-export const Square = styled.div`
-    ${commonStyles}
-    
-`
-
-export const Pill = styled.div`
-    ${commonStyles}
-    border-radius: 1em;
-    
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+    padding: 0.7em 1.5em;
+    margin: 0 0.5em;
+    ${props => props.shape === "pill" && `border-radius: 1em` };
+    background-color: ${props => `var(--bgclr-${props.color})` || "var(--bgclr-gray)"};
+    color: ${props => `var(--clr-${props.color})` || "var(--clr-gray)"};
 `
