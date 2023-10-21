@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
         --fs-normal: 1rem;
         --fs-small: 0.8rem;
         
+        --clr-white: #FFFFFF;
         --clr-gray: #1F2937;
         --clr-red: #991B1B;
         --clr-yellow: #92400E;

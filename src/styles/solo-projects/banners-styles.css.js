@@ -1,6 +1,6 @@
 import {styled} from "styled-components";
 
-export const BannerContainer = styled.div`
+export const BannersContainer = styled.div`
     display: grid;
     grid-template-areas: ". title ."
                          ". left-subtitle right-subtitle"
@@ -44,6 +44,8 @@ export const StyledBanner = styled.div`
     background-color: ${props => `var(--bgclr-${props.color})` || "var(--bgclr-green)"};
     padding: 0.5em 1em;
     margin: auto 2em auto 0;
+
+    font-size: var(--fs-small);
 `
 export const MBannerSuccess = styled(StyledBanner)`
     grid-area: m-banner-success;

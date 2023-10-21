@@ -1,22 +1,17 @@
 import GlobalStyle from "../styles/solo-projects/global-styles.css";
-import { BadgeContainer } from "../styles/solo-projects/badges-styles.css";
-import { BannerContainer,
+import { BadgesContainer } from "../styles/solo-projects/badges-styles.css";
+import { BannersContainer,
      LeftSubtitle,
      RightSubtitle,
      StyledTitle,
      SuccessSubtitle,
      WarningSubtitle,
      ErrorSubtitle,
-     NeutralSubtitle,
-     MBannerSuccess,
-     MBannerWarning,
-     MBannerError,
-     MBannerNeutral,
-     SBannerSuccess,
-     SBannerWarning,
-     SBannerError,
-     SBannerNeutral} from "../styles/solo-projects/banners-styles.css";
+     NeutralSubtitle} from "../styles/solo-projects/banners-styles.css";
 import Badge from "../components/solo-projects/Badge"
+import Banner from "../components/solo-projects/Banner";
+import { CardsContainer, Container } from "../styles/solo-projects/cards-styles.css";
+import Card from "../components/solo-projects/Card";
 
 export default function SoloProjects() {
     const colors = ["gray", "red", "yellow", "green", "blue", "indigo", "purple", "pink"];
@@ -25,19 +20,34 @@ export default function SoloProjects() {
         return colors.map(color => <Badge key={color} color={color} shape={shape}>Badge</Badge>);
     }
 
+    const banners = [{id: "1", title: "Congratulations!", color: "green", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam."},
+                     {id: "2", title: "Attention", color: "yellow", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum."},
+                     {id: "3", title: "There is a problem with your application", color: "red", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum."},
+                     {id: "4", title: "Update available", color: "blue", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam."},
+                     {id: "5", title: "Congratulations!", color: "green"},
+                     {id: "6", title: "Attention", color: "yellow"},
+                     {id: "7", title: "There is a problem with your application", color: "red"},
+                     {id: "8", title: "Update available", color: "blue"}]
+
+    function generateBanners() {
+        return banners.map(banner => 
+            <Banner key={banner.id} color={banner.color} desc={banner.desc}>{banner.title}</Banner>
+        )
+    }
+
     return (
         <>
             <GlobalStyle />
 
-            <BadgeContainer>
+            <BadgesContainer>
                 <h1>BADGES</h1>
                 <h2>Square</h2>
                 {generateBadges("square")}
                 <h2>Pill</h2>
                 {generateBadges("pill")}
-            </BadgeContainer>
+            </BadgesContainer>
 
-            <BannerContainer>
+            <BannersContainer>
                 <StyledTitle>Banners</StyledTitle>
                 <LeftSubtitle>MULLTI LINE</LeftSubtitle>
                 <RightSubtitle>SINGLE LINE</RightSubtitle>
@@ -45,16 +55,16 @@ export default function SoloProjects() {
                 <WarningSubtitle>WARNING</WarningSubtitle>
                 <ErrorSubtitle>ERROR</ErrorSubtitle>
                 <NeutralSubtitle>NEUTRAL</NeutralSubtitle>
-                <MBannerSuccess color="green">Congratulation</MBannerSuccess>
-                <MBannerWarning color="yellow">Attention</MBannerWarning>
-                <MBannerError color="red">There is a problem with your application</MBannerError>
-                <MBannerNeutral color="blue">Update Available</MBannerNeutral>
-                <SBannerSuccess color="green">Congratulation</SBannerSuccess>
-                <SBannerWarning color="yellow">Attention</SBannerWarning>
-                <SBannerError color="red">There is a problem with your application</SBannerError>
-                <SBannerNeutral color="blue">Update Available</SBannerNeutral>
-            </BannerContainer>
+                { generateBanners() }
+            </BannersContainer>
 
+            <CardsContainer>
+                <h1>CARDS</h1>
+                <Container>
+                    <Card />
+                    <Card $hover />
+                </Container>
+            </CardsContainer>
         </>
     )
 }

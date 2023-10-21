@@ -1,6 +1,6 @@
 import {styled} from "styled-components";
 
-export const BadgeContainer = styled.div`
+export const BadgesContainer = styled.div`
     h1 {
         margin: 1em 4em;
     }
