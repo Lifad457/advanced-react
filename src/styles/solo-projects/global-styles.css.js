@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
         --clr-purple: #5B21B6;
         --clr-pink: #9D174D;
 
+        --bgclr-white: whitesmoke;
         --bgclr-gray: #F3F4F6;
         --bgclr-red: #FEE2E2;
         --bgclr-yellow: #FEF3C7;
@@ -44,9 +45,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: #dddddd;
+        background-color: #eeeeee;
         font-family: var(--ff-primary);
-        margin: 0 5%;
 
         h1 {
             font-family: var(--ff-secondary);

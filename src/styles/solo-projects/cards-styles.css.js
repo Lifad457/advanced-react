@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 
 export const CardsContainer = styled.div`
+    margin: 0 5%;
     h1 {
         margin: 1.5em 4em;
     }
@@ -14,7 +15,7 @@ export const Container = styled.div`
     padding: 2em 0;
 `   
 export const StyledCloud = styled(AiOutlineCloudUpload)`
-        color: white;
+        color: var(--clr-white);
         position: absolute;
         width: 40px;
         height: 40px;
@@ -22,7 +23,7 @@ export const StyledCloud = styled(AiOutlineCloudUpload)`
         left: 230px;
 `
 export const StyledCard = styled.div`
-    background-color: whitesmoke;
+    background-color: var(--bgclr-white);
     border-radius: 1em;
     padding: 3em;
     text-align: center;

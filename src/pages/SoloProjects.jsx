@@ -12,6 +12,9 @@ import Badge from "../components/solo-projects/Badge"
 import Banner from "../components/solo-projects/Banner";
 import { CardsContainer, Container } from "../styles/solo-projects/cards-styles.css";
 import Card from "../components/solo-projects/Card";
+import { TestimonialesContainer } from "../styles/solo-projects/testimoniales-styles.css";
+import Testimonial from "../components/solo-projects/Testimonial";
+import photo from "../assets/images/photo.jpg"
 
 export default function SoloProjects() {
     const colors = ["gray", "red", "yellow", "green", "blue", "indigo", "purple", "pink"];
@@ -65,6 +68,23 @@ export default function SoloProjects() {
                     <Card $hover />
                 </Container>
             </CardsContainer>
+
+            <TestimonialesContainer>
+                <h1>TESTIMONIALS</h1>
+                <h2>With Pic</h2>
+                <Testimonial 
+                    pic={photo} 
+                    quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit." 
+                    name="John Doe"
+                    location="New York, NY"
+                />
+                <h2>No Pic</h2>
+                <Testimonial 
+                    quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit." 
+                    name="John Doe"
+                    location="New York, NY"
+                />
+            </TestimonialesContainer>
         </>
     )
 }
