@@ -61,9 +61,6 @@ export const TestimonialWithPic = styled.div`
             left: 2.5em;
             object-fit: contain;
         }
-
-        q {
-        }
     }
 `
 export const TestimonialWithoutPic = styled.div`
@@ -91,6 +88,16 @@ export const TestimonialWithoutPic = styled.div`
     span {
         color: var(--clr-blue);
         font-weight: var(--fw-bold);   
+    }
+
+    @media screen and (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        min-width: 300px;
+        max-height: unset;
+        min-height: unset;
+        padding: 8em 1.5em 8em 1.5em;
     }
 `
 export const StyledIcon = styled(MdOutlineHouseboat)`
